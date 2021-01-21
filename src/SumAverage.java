@@ -16,11 +16,10 @@ public class SumAverage {
    */
   public static int sum(int lowerBound, int upperBound) {
     // TODO fill in code here using for loop and replace the return statement
-    int[] arr = {lowerBound,upperBound};
     int sum = 0;
-    for (int i = 0; i < arr.length; i++) {
-      if (lowerBound <= upperBound) {sum += arr[i];}}
-    System.out.println("Sum = " + sum);
+    for (int i = lowerBound; i <=upperBound; i++) {
+      sum +=i;
+    }
     return sum;
   }
 
@@ -32,9 +31,11 @@ public class SumAverage {
    */
   public static int sum(int[] numbers) {
     // TODO fill in code here using for each loop and replace the return statement
-    digitCount = 0;
-    digitCount++;
-    return digitCount;
+    int sum = 0;
+    for(int i : numbers) {
+      sum += i;
+    }
+    return sum;
   }
 
   /**
@@ -46,10 +47,13 @@ public class SumAverage {
    */
 
   public static double average(int lowerBound, int upperBound) {
-    // TODO fill in code here using while loop and replace the return statement
-    if (digitCount != 0) {
-      average = (sum / digitCount);
+    int i = lowerBound;
+    while (i <= upperBound) {
+      sum += i;
+      digitCount++;
+      i++;
     }
+    average = (sum / digitCount);
     return average;
   }
 
@@ -60,7 +64,14 @@ public class SumAverage {
    * @return average of integers
    */
   public static double average(int[] numbers) {
-    // TODO fill in code here using do-while loop and replace the return statement
-    return 0;
+    double sum = 0;
+    int i = 0;
+    do {
+      sum += numbers[i];
+      i++;
+    } while (i < numbers.length);
+
+    double average = sum / numbers.length;
+    return average;
   }
 }
