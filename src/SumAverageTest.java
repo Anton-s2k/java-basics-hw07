@@ -1,9 +1,9 @@
-import static org.testng.Assert.assertEquals;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import java.util.stream.IntStream;
 
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
 public class SumAverageTest {
 
@@ -17,8 +17,9 @@ public class SumAverageTest {
     return new Object[][]{
         {1, 100, 5050},
         {-100, 100, 0},
-        {1, 1, 1}
-        // TODO add 2 more test data here
+        {1, 1, 1},
+        {0, 0, 0} ,// my test 1
+            {-1, -1, -1} // my test 2
     };
   }
 
@@ -32,8 +33,9 @@ public class SumAverageTest {
     return new Object[][]{
         {1, 100, 50.5},
         {-100, 100, 0.0},
-        {1, 1, 1.0}
-        // TODO add 2 more test data here
+        {1, 1, 1.0},
+          {0, 0, 0.0}, //my test 1
+          {-1, -1, -1.0} //my test 2
     };
   }
 

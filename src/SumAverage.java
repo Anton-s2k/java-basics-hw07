@@ -2,8 +2,8 @@
  * Compute the sum and average for running integers using loop.
  */
 public class SumAverage {
-  public static int digitCount;
-  public static int sum;
+  public static double digitCount;
+  public static double sum;
   public static double average;
 
 
@@ -45,6 +45,8 @@ public class SumAverage {
    */
 
   public static double average(int lowerBound, int upperBound) {
+    sum = 0;
+    digitCount = 0;
     int i = lowerBound;
     while (i <= upperBound) {
       sum += i;
